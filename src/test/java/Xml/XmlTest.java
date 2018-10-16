@@ -8,7 +8,7 @@ public class XmlTest {
 
     @Test
     public void WhenAddUser(){
-        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring-context.xml");
+        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring-contextTest.xml");
         ImportUser importUser=applicationContext.getBean(ImportUser.class);
         importUser.addUser();
     }

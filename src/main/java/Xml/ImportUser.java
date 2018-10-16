@@ -2,7 +2,7 @@ package Xml;
 
 public class ImportUser {
 
-    private Storage storage;
+    private final Storage storage;
 
     public ImportUser(Storage storage) {
         this.storage = storage;

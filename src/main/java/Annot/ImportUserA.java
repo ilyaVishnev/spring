@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ImportUserA {
 
-    private Storage storage;
+    private final Storage storage;
 
     @Autowired
     public ImportUserA(Storage storage) {

@@ -5,6 +5,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:component-scan base-package="Storage"/>
+    <bean id="memory" class="Xml.MemoryStorage"></bean>
+
+    <bean id="importUser" class="Xml.ImportUser">
+        <constructor-arg name="storage" ref="memory"></constructor-arg>
+    </bean>
+
+    <bean id="neWmemory" class="Storage.MemoryStorage"></bean>
+
+    <bean id="neWimportUser" class="Storage.ImportUser">
+        <constructor-arg name="storage" ref="neWmemory"></constructor-arg>
+    </bean>
+    <context:component-scan base-package="Annot"/>
 
 </beans>

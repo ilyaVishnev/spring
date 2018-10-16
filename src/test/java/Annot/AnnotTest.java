@@ -9,7 +9,7 @@ public class AnnotTest {
 
     @Test
     public void WhenAddUser(){
-        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring-context.xml");
+        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("spring-contextTest.xml");
         ImportUserA importUser=applicationContext.getBean(ImportUserA.class);
         importUser.addUser();
     }
